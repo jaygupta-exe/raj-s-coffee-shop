@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj's Coffee | Premium Espresso & Brews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <nav id="main-nav" class="navbar sticky">
+        <div class="container nav-content">
+            <div class="logo">Raj's Coffee</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#shop">SHOP</a></li>
+                <li><a href="#journal">JOURNAL</a></li>
+                <li><a href="#stories">STORIES</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="cart-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1" />
+                        <circle cx="20" cy="21" r="1" />
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Slider Section -->
+        <section id="home" class="hero video-hero">
+            <div class="hero-slider">
+                <!-- Slide 1: Dark Espresso -->
+                <div class="hero-slide active" data-slide="1">
+                    <div class="video-background">
+                        <video autoplay muted loop playsinline class="hero-video">
+                            <source src="Create_a_10second_202602151848_jv2be.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay"></div>
+                    </div>
+                    <div class="container hero-container-asymmetric">
+                        <div class="hero-left">
+                            <span class="category-label">SIGNATURE BLEND</span>
+                            <h1 class="hero-title-main">Dark<br>Espresso</h1>
+                            <p class="hero-tagline-italic">Bold, intense,<br>unforgettable.</p>
+                        </div>
+                        <div class="hero-right">
+                            <div class="hero-description">
+                                <p>Rich Arabica beans roasted to perfection for a deep, robust flavor that awakens your
+                                    senses.</p>
+                            </div>
+                            <div class="hero-pricing">
+                                <span class="currency">₹</span><span class="price-value">899</span> <span
+                                    class="unit">per 250g bag</span>
+                            </div>
+                            <div class="hero-cta-action">
+                                <a href="#shop" class="btn btn-outline-themed">SHOP DARK ESPRESSO <span
+                                        class="arrow">→</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Hazelnut Brew -->
+                <div class="hero-slide" data-slide="2">
+                    <div class="video-background">
+                        <video muted loop playsinline class="hero-video">
+                            <source src="Create_a_premium_202602151916_idjgt.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay"></div>
+                    </div>
+                    <div class="container hero-container-asymmetric">
+                        <div class="hero-left">
+                            <span class="category-label">SEASONAL FAVORITE</span>
+                            <h1 class="hero-title-main">Hazelnut<br>Brew</h1>
+                            <p class="hero-tagline-italic">Nutty, warm,<br>comforting.</p>
+                        </div>
+                        <div class="hero-right">
+                            <div class="hero-description">
+                                <p>European hazelnut meets medium roast for a cozy, aromatic experience perfect for any
+                                    time of day.</p>
+                            </div>
+                            <div class="hero-pricing">
+                                <span class="currency">₹</span><span class="price-value">999</span> <span
+                                    class="unit">per 250g bag</span>
+                            </div>
+                            <div class="hero-cta-action">
+                                <a href="#shop" class="btn btn-outline-themed">SHOP HAZELNUT BREW <span
+                                        class="arrow">→</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Vanilla French -->
+                <div class="hero-slide" data-slide="3">
+                    <div class="video-background">
+                        <video muted loop playsinline class="hero-video">
+                            <source src="Create_an_8second_202602151937_490fv.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay"></div>
+                    </div>
+                    <div class="container hero-container-asymmetric">
+                        <div class="hero-left">
+                            <span class="category-label">PREMIUM ROAST</span>
+                            <h1 class="hero-title-main">Vanilla<br>French</h1>
+                            <p class="hero-tagline-italic">Smooth, sweet, elegant.</p>
+                        </div>
+                        <div class="hero-right">
+                            <div class="hero-description">
+                                <p>Velvety French roast kissed with natural Madagascar vanilla for a luxurious morning
+                                    ritual.</p>
+                            </div>
+                            <div class="hero-pricing">
+                                <span class="currency">₹</span><span class="price-value">999</span> <span
+                                    class="unit">per 250g bag</span>
+                            </div>
+                            <div class="hero-cta-action">
+                                <a href="#shop" class="btn btn-outline-themed">SHOP VANILLA FRENCH <span
+                                        class="arrow">→</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-controls">
+                <button class="control-btn prev" id="prevSlide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+                <button class="control-btn next" id="nextSlide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="scroll-indicator-container">
+                <span class="scroll-text">SCROLL TO EXPLORE</span>
+                <div class="scroll-mouse">
+                    <div class="mouse-wheel"></div>
+                </div>
+                <div class="scroll-dots">
+                    <span class="dot active" data-target="1"></span>
+                    <span class="dot" data-target="2"></span>
+                    <span class="dot" data-target="3"></span>
+                </div>
+                <div class="scroll-arrow-down">↓</div>
+            </div>
+        </section>
+
+        <!-- "The Ritual" Section -->
+        <section class="ritual reveal-section">
+            <div class="container reveal-content">
+                <div class="ritual-visual">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=1200"
+                        alt="Perfect Pour">
+                    <div class="overlay-text">
+                        <h2>Perfect Pour, Every Time</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Section -->
+        <section id="shop" class="collection reveal-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Our Collection</span>
+                    <h2>Discover Our Coffees</h2>
+                </div>
+                <div class="product-grid">
+                    <!-- Cards will be similar to hero but smaller/grid layout -->
+                    <div class="product-card">
+                        <div class="card-img hover-zoom">
+                            <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&q=80&w=600"
+                                alt="Midnight Blend">
+                        </div>
+                        <div class="card-info">
+                            <h3>Midnight Blend</h3>
+                            <p>Our darkest roast for the night owls.</p>
+                            <div class="card-bottom">
+                                <span class="price">$19.00</span>
+                                <button class="btn btn-mini">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="card-img hover-zoom">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
+                                alt="Morning Sun">
+                        </div>
+                        <div class="card-info">
+                            <h3>Morning Sun</h3>
+                            <p>Bright and citrusy light roast.</p>
+                            <div class="card-bottom">
+                                <span class="price">$18.00</span>
+                                <button class="btn btn-mini">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more products as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials reveal-section">
+            <div class="container">
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"The intensity of the Dark Espresso is unmatched. It's transformed my mornings completely."
+                        </p>
+                        <span class="author">— James R.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Beautiful packaging and even better aroma. The Hazelnut Brew is a masterpiece."</p>
+                        <span class="author">— Sarah L.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Smooth, rich, and never bitter. You can feel the craftsmanship in every cup."</p>
+                        <span class="author">— Michael K.</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Fast delivery and the freshest beans I've ever ordered online. 10/10."</p>
+                        <span class="author">— Elena P.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section (Horizontal Storytelling) -->
+        <section class="process-wrapper">
+            <div class="process-horizontal-container">
+                <div class="process-track">
+                    <div class="process-step">
+                        <div class="step-content">
+                            <span class="step-num">01</span>
+                            <h2>Masterfully Roasted</h2>
+                            <p>Our beans are roasted in small batches to ensure precision and flavor depth that
+                                industrial roasting can't match.</p>
+                        </div>
+                        <div class="step-visual">
+                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=1000"
+                                alt="Roasting">
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-content">
+                            <span class="step-num">02</span>
+                            <h2>The Perfect Grind</h2>
+                            <p>Consistency is key. We calibrate our grinders daily to achieve the exact micron profile
+                                for each specific bean.</p>
+                        </div>
+                        <div class="step-visual">
+                            <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?auto=format&fit=crop&q=80&w=1000"
+                                alt="Grinding">
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-content">
+                            <span class="step-num">03</span>
+                            <h2>The Extraction</h2>
+                            <p>Pressure, temperature, and time. We control every variable to pull the perfect shot,
+                                every single time.</p>
+                        </div>
+                        <div class="step-visual">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1000"
+                                alt="Extraction">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">RAJ'S <span>COFFEE</span></div>
+                <p>Curating the world's finest beans for the modern connoisseur.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Subscription</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="icons">
+                    <!-- Placeholder icons -->
+                    <span>IG</span> <span>FB</span> <span>TW</span>
+                </div>
+                <div class="payments">
+                    <span>VISA</span> <span>MC</span> <span>APPLE</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Raj's Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
