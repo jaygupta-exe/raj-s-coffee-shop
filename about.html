@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact &amp; Quick Order | SNACK UP</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff8c00",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#231a0f",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-40">
+                <a href="index.html" class="flex items-center gap-4 text-primary hover:scale-105 transition-transform">
+                    <div class="size-8 flex items-center justify-center bg-primary rounded-full text-background-dark">
+                        <span class="material-symbols-outlined font-bold">fastfood</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">SNACK
+                        UP
+                    </h2>
+                </a>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="menu.html">Menu</a>
+                        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">Deals</a>
+                        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">Locations</a>
+                        <a class="text-primary text-sm font-bold transition-colors" href="about.html">Contact</a>
+                    </nav>
+                    <button
+                        class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-background-dark text-sm font-bold transition-transform hover:scale-105"
+                        onclick="window.location.href='menu.html'">
+                        Order Now
+                    </button>
+                </div>
+                <button class="md:hidden text-slate-900 dark:text-slate-100">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </header>
+            <main class="flex-1 flex flex-col items-center py-10 px-4">
+                <div class="max-w-4xl w-full space-y-8">
+                    <!-- Header Section -->
+                    <div class="text-center md:text-left space-y-2">
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-slate-100">
+                            Contact &amp; Quick Order</h1>
+                        <p class="text-slate-600 dark:text-primary/70 text-lg">Get your snacks fast via WhatsApp or
+                            visit our flagship store.</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        <!-- Location Card -->
+                        <div
+                            class="flex flex-col gap-6 p-1 bg-white dark:bg-primary/5 rounded-xl border border-slate-200 dark:border-primary/10 overflow-hidden shadow-xl">
+                            <div class="relative w-full aspect-video rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500"
+                                data-alt="Modern stylized map of Food City area" data-location="Food City"
+                                style='background-image: url("https://placeholder.pics/svg/300"); background-size: cover; background-position: center;'>
+                                <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex flex-col items-center">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-5xl drop-shadow-lg">location_on</span>
+                                        <div
+                                            class="bg-background-dark text-white text-xs px-2 py-1 rounded-full mt-1 border border-primary/50">
+                                            SNACK UP HERE</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 pb-6 space-y-6">
+                                <div class="space-y-1">
+                                    <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Main Branch</h3>
+                                    <p class="text-slate-500 dark:text-slate-400">123 Tasty Avenue, Food City District 5
+                                    </p>
+                                </div>
+                                <div class="space-y-3">
+                                    <p class="text-sm font-bold uppercase tracking-widest text-primary/80">Opening Hours
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-semibold rounded-full">MON-FRI:
+                                            10AM - 11PM</span>
+                                        <span
+                                            class="px-3 py-1 bg-primary text-background-dark text-xs font-bold rounded-full">SAT-SUN:
+                                            11AM - 1AM</span>
+                                        <span
+                                            class="px-3 py-1 bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 text-xs font-semibold rounded-full">HOLIDAYS:
+                                            CLOSED</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3 pt-4">
+                                    <button
+                                        class="flex-1 flex items-center justify-center gap-2 h-14 rounded-full bg-slate-900 dark:bg-white text-white dark:text-background-dark font-bold hover:opacity-90 transition-opacity">
+                                        <span class="material-symbols-outlined">call</span>
+                                        Call Now
+                                    </button>
+                                    <button
+                                        class="flex-1 flex items-center justify-center gap-2 h-14 rounded-full bg-primary text-background-dark font-bold hover:opacity-90 transition-opacity">
+                                        <span class="material-symbols-outlined">near_me</span>
+                                        Directions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- WhatsApp Modal/Card -->
+                        <div
+                            class="relative flex flex-col h-full min-h-[400px] p-8 bg-primary rounded-xl overflow-hidden shadow-2xl">
+                            <!-- Pattern Overlay -->
+                            <div
+                                class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl">
+                            </div>
+                            <div class="relative z-10 flex flex-col h-full justify-between">
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                                            <span
+                                                class="material-symbols-outlined text-[#25D366] text-3xl font-bold">chat</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-background-dark text-xl font-bold">Quick Order</h4>
+                                            <p class="text-background-dark/70 text-sm font-medium">Average response: 2
+                                                mins</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-8 space-y-4">
+                                        <!-- Message Bubble -->
+                                        <div
+                                            class="bg-white p-4 rounded-xl rounded-tl-none max-w-[85%] shadow-lg relative">
+                                            <p class="text-slate-800 text-base font-medium leading-relaxed">
+                                                Hi, I want to order from <span class="text-primary font-bold">SNACK
+                                                    UP</span>. Can I see the current specials?
+                                            </p>
+                                            <span class="text-[10px] text-slate-400 absolute bottom-1 right-2">10:42
+                                                AM</span>
+                                        </div>
+                                        <div
+                                            class="bg-background-dark/10 p-4 rounded-xl rounded-tr-none ml-auto max-w-[85%] border border-white/20">
+                                            <p class="text-background-dark text-base font-medium">
+                                                Sure! What would you like to order today? 🍔🍟
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-10">
+                                    <a class="group flex items-center justify-between bg-background-dark text-white p-2 pl-6 rounded-full w-full hover:bg-slate-800 transition-all"
+                                        href="#">
+                                        <span class="font-bold tracking-tight">Open WhatsApp Chat</span>
+                                        <div
+                                            class="size-12 bg-primary rounded-full flex items-center justify-center text-background-dark group-hover:rotate-12 transition-transform">
+                                            <span class="material-symbols-outlined">send</span>
+                                        </div>
+                                    </a>
+                                    <p
+                                        class="text-center text-background-dark/50 text-[10px] uppercase font-bold tracking-tighter mt-4">
+                                        Safe &amp; Encrypted Ordering</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Decorative -->
+                    <div class="flex justify-center pt-12">
+                        <div class="flex items-center gap-6 opacity-40 grayscale hover:grayscale-0 transition-all">
+                            <span class="material-symbols-outlined text-4xl">delivery_dining</span>
+                            <span class="material-symbols-outlined text-4xl">payments</span>
+                            <span class="material-symbols-outlined text-4xl">star</span>
+                            <span class="material-symbols-outlined text-4xl">schedule</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Bottom Floating Action for Mobile -->
+            <div class="md:hidden fixed bottom-6 right-6 z-50">
+                <button
+                    class="size-16 rounded-full bg-primary text-background-dark shadow-2xl flex items-center justify-center active:scale-95 transition-transform">
+                    <span class="material-symbols-outlined text-3xl font-bold">shopping_cart</span>
+                </button>
+            </div>
+            <!-- Footer Area -->
+            <footer class="bg-white/5 border-t border-white/5 mt-12 py-12 px-6">
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div>
+                        <div class="flex items-center justify-center md:justify-start gap-2 text-primary mb-4">
+                            <span class="material-symbols-outlined">fastfood</span>
+                            <span class="font-bold tracking-tighter uppercase">SNACK UP</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Elevating the snacking experience with premium ingredients and
+                            lightning-fast delivery.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-100 font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-primary transition-colors" href="menu.html">Menu</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="about.html">Contact</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-100 font-bold mb-4">Newsletter</h4>
+                        <div class="flex h-10 rounded-full bg-white/5 border border-white/10 overflow-hidden">
+                            <input class="bg-transparent border-none text-xs flex-1 focus:ring-0 px-4"
+                                placeholder="Email" type="email" />
+                            <button
+                                class="bg-primary text-background-dark px-4 text-xs font-bold uppercase">Join</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="max-w-5xl mx-auto mt-12 pt-8 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest">
+                    © 2024 SNACK UP GLOBAL. ALL RIGHTS RESERVED.
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
