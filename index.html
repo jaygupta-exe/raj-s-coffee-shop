@@ -68,14 +68,14 @@
     <nav
         class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3 hover:scale-105 transition-transform">
                 <div class="bg-primary p-2 rounded-lg flex items-center justify-center">
                     <span class="material-symbols-outlined text-background-dark font-bold">fastfood</span>
                 </div>
                 <h1 class="text-2xl font-bold tracking-tighter text-primary">SNACK UP</h1>
-            </div>
+            </a>
             <div class="hidden md:flex items-center gap-8 font-medium">
-                <a class="hover:text-primary transition-colors" href="#">Menu</a>
+                <a class="hover:text-primary transition-colors" href="menu.html">Menu</a>
                 <a class="hover:text-primary transition-colors" href="#">Offers</a>
                 <a class="hover:text-primary transition-colors" href="#">Track Order</a>
                 <button
@@ -117,7 +117,8 @@
                             <span class="material-symbols-outlined">arrow_forward</span>
                         </button>
                         <button
-                            class="glass-effect px-10 py-4 rounded-full font-bold hover:bg-primary/10 transition-colors">
+                            class="glass-effect px-10 py-4 rounded-full font-bold hover:bg-primary/10 transition-colors"
+                            onclick="window.location.href='menu.html'">
                             View Menu
                         </button>
                     </div>

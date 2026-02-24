@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SNACK UP - Food Menu Grid</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff8c00",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#231a0f",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header
+                class="sticky top-0 z-50 flex items-center justify-between border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+                <div class="flex items-center gap-8">
+                    <a href="index.html"
+                        class="flex items-center gap-3 text-primary hover:scale-105 transition-transform">
+                        <span class="material-symbols-outlined text-3xl font-bold">fastfood</span>
+                        <h2 class="text-xl font-bold leading-tight tracking-tight uppercase">SNACK UP</h2>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-slate-100 text-sm font-medium hover:text-primary transition-colors"
+                            href="menu.html">Menu</a>
+                        <a class="text-slate-400 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">Deals</a>
+                        <a class="text-slate-400 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">Orders</a>
+                        <a class="text-slate-400 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">Profile</a>
+                    </nav>
+                </div>
+                <div class="flex flex-1 justify-end gap-4 items-center">
+                    <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+                        <div
+                            class="flex w-full flex-1 items-stretch rounded-full bg-white/5 border border-white/10 overflow-hidden">
+                            <div class="text-slate-400 flex items-center justify-center pl-4">
+                                <span class="material-symbols-outlined text-xl">search</span>
+                            </div>
+                            <input
+                                class="w-full border-none bg-transparent focus:ring-0 text-slate-100 placeholder:text-slate-500 px-3 text-sm"
+                                placeholder="Search snacks..." value="" />
+                        </div>
+                    </label>
+                    <button
+                        class="flex items-center justify-center rounded-full size-10 bg-white/5 border border-white/10 text-slate-100 hover:bg-primary/20 transition-all">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                    <button class="md:hidden p-2 rounded-full bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </header>
+            <main class="flex-1 w-full max-w-5xl mx-auto px-4 py-8">
+                <!-- Hero Section -->
+                <div class="flex flex-col gap-2 mb-8">
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-100">Crave More.</h1>
+                    <p class="text-slate-400 text-lg">Fresh, fast, and high-end snacks delivered in minutes.</p>
+                </div>
+                <!-- Categories -->
+                <div class="mb-8 overflow-x-auto no-scrollbar">
+                    <div class="flex gap-4 pb-2 border-b border-white/5">
+                        <button
+                            class="px-6 py-2 rounded-full bg-primary text-background-dark font-bold text-sm whitespace-nowrap">All
+                            Items</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white/5 text-slate-400 font-bold text-sm whitespace-nowrap hover:bg-white/10 transition-all">Pizza</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white/5 text-slate-400 font-bold text-sm whitespace-nowrap hover:bg-white/10 transition-all">Fries</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white/5 text-slate-400 font-bold text-sm whitespace-nowrap hover:bg-white/10 transition-all">Milk
+                            Shake</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white/5 text-slate-400 font-bold text-sm whitespace-nowrap hover:bg-white/10 transition-all">Burger</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white/5 text-slate-400 font-bold text-sm whitespace-nowrap hover:bg-white/10 transition-all">Grilled
+                            Chicken</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white/5 text-slate-400 font-bold text-sm whitespace-nowrap hover:bg-white/10 transition-all">Wrap</button>
+                        <button
+                            class="px-6 py-2 rounded-full bg-white/5 text-slate-400 font-bold text-sm whitespace-nowrap hover:bg-white/10 transition-all">Pasta</button>
+                    </div>
+                </div>
+                <!-- Food Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    <!-- Item 1 -->
+                    <div
+                        class="group relative flex flex-col bg-white/5 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm transition-all hover:border-primary/50 shadow-lg">
+                        <div class="relative w-full aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Gourmet double cheeseburger with fresh toppings"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr_5i832wdd0KftzDapvCa-cK2zUTWsH5qd3N2dErkwXcespmcBPuMuXUlIGAMKLQFIiE-amYpVXFG_zekzhWGyPju5LL0nJC-QzH0Mm_P88jlXHOOerbcr1MqQeztSelwWpS5DVRfzLTNSZyhB8wyqPuhY2cqO7YmZbwvIt15fOwxRlwwooVbqv2RfXjK1ozPy8IWeinq9iASB3vaIE25ARPuCUtXo3c01iGec4JUb7esmuxYZBxnfNdmDxOoCqpiN-5w6l7wMHQ" />
+                            <button
+                                class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-background-dark shadow-xl hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-bold">add</span>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <p
+                                class="text-slate-100 text-base font-bold leading-tight group-hover:text-primary transition-colors">
+                                Signature Burger</p>
+                            <p class="text-primary font-bold text-lg mt-1">$12.99</p>
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="material-symbols-outlined text-xs text-yellow-500 fill-current">star</span>
+                                <span
+                                    class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Popular</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="group relative flex flex-col bg-white/5 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm transition-all hover:border-primary/50 shadow-lg">
+                        <div class="relative w-full aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Crispy truffle fries with parmesan cheese"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_l8o5koXEnM-WQoXKOvGBsFIqo8k0ANlwY6bAgyIBFHvG9zJkbm5TRVCBB8_0zOF7SoWn1Av2s8Eg3GMlU1GUfPvRUAgB0HCx2ryp_W1OSK4GpLEWrXSTJedC7hp_XuZNUUssg3LCZjETK98a1eyjtMJqqkKYzffTUIVEdTe09yV96qeFos1z440fHAX3JrNWFw2ZCeMbUrlDMq9SqiE_ZwI0AqZe5ngWEIbDUTpiRYSpw4AgrGWGlW44Ocwvgj9BWZf0YC09l-4" />
+                            <button
+                                class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-background-dark shadow-xl hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-bold">add</span>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <p
+                                class="text-slate-100 text-base font-bold leading-tight group-hover:text-primary transition-colors">
+                                Truffle Fries</p>
+                            <p class="text-primary font-bold text-lg mt-1">$6.50</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="group relative flex flex-col bg-white/5 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm transition-all hover:border-primary/50 shadow-lg">
+                        <div class="relative w-full aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Spicy buffalo chicken wings platter"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-9LBuH4hJhonkvavuwZ_IWX8LMVmTa49psrWsCzPUeZJaPpqIuMoqNfw7GBtks7iLe_4RKGotN0rVxyouyeyIvhApj36i-gukVWa3HFPOc2hNU1UiMyn8C2ocbp8ooXMhKPzk1bt5yQkJ2MHbTEn07aZ-JLhZOl4TgK8RjtSuBKjW2R-oQC-QlkuPf_S_7BbDo4e8EWxPXifE0iU0qpZodgh48jR0JS9oVO1-KX68hBuJ8S7_5IbF_sU7KkObAXUjjzRbfXeeeg0" />
+                            <button
+                                class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-background-dark shadow-xl hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-bold">add</span>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <p
+                                class="text-slate-100 text-base font-bold leading-tight group-hover:text-primary transition-colors">
+                                Spicy Wings</p>
+                            <p class="text-primary font-bold text-lg mt-1">$9.00</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div
+                        class="group relative flex flex-col bg-white/5 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm transition-all hover:border-primary/50 shadow-lg">
+                        <div class="relative w-full aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Towering double cheese stack burger"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcB9Oh91pIWq4MAhd1g18PcbT_ejzNqjlX189rskLr7y2OdmUhSo7u3aOLHBblJWsBcjQrod3lTqZi0g_c57bjAmNmmX_MbJ2OqoSJR-eoeVohGDKLS7ywwhl1Vd-cxdkTmnKOB-vuwy8LEzIFwRUb0aTUhmT3Ul_Ce7c_F1WfATgrLXmW1i-ea1N-zMgjjC3zydIbKDe10MqVqjYAqBLoR-I0AhVCJ11-T8rsAJlWN6KpMZMXZadglUbtUvYx2lfBRW2a6jhbg4Q" />
+                            <button
+                                class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-background-dark shadow-xl hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-bold">add</span>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <p
+                                class="text-slate-100 text-base font-bold leading-tight group-hover:text-primary transition-colors">
+                                Double Cheese</p>
+                            <p class="text-primary font-bold text-lg mt-1">$14.00</p>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div
+                        class="group relative flex flex-col bg-white/5 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm transition-all hover:border-primary/50 shadow-lg">
+                        <div class="relative w-full aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Golden breaded onion rings with sauce"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiUfg7wGQYsmRS0rBL1a8PzvJeoCUJ-8WGh6bHeWXlm1g9XrNDmC9M-L4dOBRduXzgHGeaKncoTGxeSx5jC535tYJqeEfTh1ImM2D-aksecuEGXAOEd5z-0DFaBEDlIXUjXh_W7e2JtIH__H3Yy662s-NWOJcAp5cMCxODF3LP-nMyXqfoKIgWlIB6HgZOQDScVMDDfLh5kAN8EdLca1Xwjw19THbMwFWF0Qv9D7YeH7SHoTsO_nRsR3zcpyCng2jdLFOsejY1V10" />
+                            <button
+                                class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-background-dark shadow-xl hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-bold">add</span>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <p
+                                class="text-slate-100 text-base font-bold leading-tight group-hover:text-primary transition-colors">
+                                Onion Rings</p>
+                            <p class="text-primary font-bold text-lg mt-1">$5.00</p>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div
+                        class="group relative flex flex-col bg-white/5 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm transition-all hover:border-primary/50 shadow-lg">
+                        <div class="relative w-full aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Cold cola float with vanilla ice cream"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiBELR3VhFRHfehCHGaOFSL32A8QLGQjkyovW6kGKSzn-3yjhzZ-Q4ZAJDqwizdajR0Ef98cv11mo-kGiiAEFq6XsSX8SwZa8KfgbW4Ni6zPpSheqLnOulrA32POXgCyuVtmfdYgL-zXQmwVOn23tOhjp0mZyjncfghJu2KUYR0VldvCilk4jYkIomcKOcAKJHwQpuapGa9eS0Be4GcRuhZA5UfLnWRS9Goc2a9OC2_S-p0qemrTzgRagW_8vXR_XkxtLdPGLBgm0" />
+                            <button
+                                class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-background-dark shadow-xl hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined font-bold">add</span>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <p
+                                class="text-slate-100 text-base font-bold leading-tight group-hover:text-primary transition-colors">
+                                Cola Float</p>
+                            <p class="text-primary font-bold text-lg mt-1">$4.50</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Floating Action Buttons -->
+            <!-- WhatsApp Button (Bottom Left) -->
+            <div class="fixed bottom-6 left-6 z-[60]">
+                <button
+                    class="flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform hover:scale-110 active:scale-95">
+                    <svg class="size-8" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Cart Button (Bottom Right) -->
+            <div class="fixed bottom-6 right-6 z-[60]">
+                <button
+                    class="relative flex h-16 px-6 items-center justify-center rounded-full bg-primary text-background-dark shadow-2xl transition-all hover:scale-105 active:scale-95 group">
+                    <span class="material-symbols-outlined text-2xl mr-2">shopping_bag</span>
+                    <span class="font-bold text-lg">Checkout</span>
+                    <!-- Red Counter Bubble -->
+                    <div
+                        class="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-white text-[10px] font-black border-2 border-background-dark animate-pulse">
+                        3
+                    </div>
+                </button>
+            </div>
+            <!-- Footer Area -->
+            <footer class="bg-white/5 border-t border-white/5 mt-12 py-12 px-6">
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div>
+                        <div class="flex items-center justify-center md:justify-start gap-2 text-primary mb-4">
+                            <span class="material-symbols-outlined">fastfood</span>
+                            <span class="font-bold tracking-tighter uppercase">SNACK UP</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Elevating the snacking experience with premium ingredients and
+                            lightning-fast delivery.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-100 font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li><a class="hover:text-primary" href="#">Track Order</a></li>
+                            <li><a class="hover:text-primary" href="#">Locations</a></li>
+                            <li><a class="hover:text-primary" href="#">Join the Team</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-100 font-bold mb-4">Newsletter</h4>
+                        <div class="flex h-10 rounded-full bg-white/5 border border-white/10 overflow-hidden">
+                            <input class="bg-transparent border-none text-xs flex-1 focus:ring-0 px-4"
+                                placeholder="Email" type="email" />
+                            <button
+                                class="bg-primary text-background-dark px-4 text-xs font-bold uppercase">Join</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="max-w-5xl mx-auto mt-12 pt-8 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest">
+                    © 2024 SNACK UP GLOBAL. ALL RIGHTS RESERVED.
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
