@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -65,7 +66,7 @@
 <body
     class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
     <!-- Sticky Top Navigation -->
-    <nav
+    <nav id="main-nav"
         class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 hover:scale-105 transition-transform">
@@ -82,11 +83,20 @@
                     class="bg-primary text-background-dark px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform">Sign
                     In</button>
             </div>
-            <button class="md:hidden p-2 rounded-full bg-primary/10 text-primary">
+            <button id="menu-toggle" class="md:hidden p-2 rounded-full bg-primary/10 text-primary"
+                style="position:relative;z-index:9999;pointer-events:auto;">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu">
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <button class="btn-mobile">Sign In</button>
+        </div>
     </nav>
+    <script src="script.js" defer></script>
     <main class="max-w-7xl mx-auto px-6 py-8">
         <!-- Hero Section -->
         <section
