@@ -771,7 +771,7 @@ h3,
     display: none;
     flex-direction: column;
     padding: 20px 0;
-    z-index: 1000;
+    z-index: 9990;
 }
 
 #mobile-menu.active {
@@ -798,6 +798,12 @@ h3,
     text-decoration: none;
     transition: all 0.3s ease;
     border-left: 0 solid #ff8c00;
+    display: block;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(255, 140, 0, 0.15);
+    cursor: pointer;
+    position: relative;
+    z-index: 9990;
 }
 
 #mobile-menu a:hover {

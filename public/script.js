@@ -54,27 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Smooth Scrolling for Nav Links & active state
-    const navLinks = document.querySelectorAll('.nav-links a');
-    if (navLinks.length > 0) {
-        navLinks.forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
-
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-    }
 
     // 5. Hero Slider Logic
     const slides = document.querySelectorAll('.hero-slide');
