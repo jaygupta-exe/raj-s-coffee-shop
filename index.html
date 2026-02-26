@@ -1,354 +1,123 @@
 <!DOCTYPE html>
+
 <html class="dark">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Snack Up | Premium Fast Food Delivery</title>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
-    <script id="tailwind-config">
+
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ff8c00",
+                        primary: "#ff8c00",
                         "background-light": "#f8f7f5",
-                        "background-dark": "#231a0f",
+                        "background-dark": "#231a0f"
                     },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                },
-            },
+                    fontFamily: { display: ["Space Grotesk", "sans-serif"] },
+                    borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }
+                }
+            }
         }
     </script>
-    <style>
-        .glass-effect {
-            background: rgba(255, 140, 0, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 140, 0, 0.1);
-        }
 
-        .category-glow:hover {
-            box-shadow: 0 0 20px rgba(255, 140, 0, 0.2);
-        }
-
-        .custom-scrollbar::-webkit-scrollbar {
-            height: 4px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #ff8c00;
-            border-radius: 10px;
-        }
-    </style>
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
-    <!-- Sticky Top Navigation -->
+
+    <!-- NAVBAR -->
+
     <nav id="main-nav"
         class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 hover:scale-105 transition-transform">
+
+            <a href="index.html" class="flex items-center gap-3">
                 <div class="bg-primary p-2 rounded-lg flex items-center justify-center">
                     <span class="material-symbols-outlined text-background-dark font-bold">fastfood</span>
                 </div>
                 <h1 class="text-2xl font-bold tracking-tighter text-primary">SNACK UP</h1>
             </a>
+
             <div class="hidden md:flex items-center gap-8 font-medium">
-                <a class="hover:text-primary transition-colors" href="menu.html">Menu</a>
-                <a class="hover:text-primary transition-colors" href="about.html">About Us</a>
-                <a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
-                <button
-                    class="bg-primary text-background-dark px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform">Sign
-                    In</button>
+                <a class="hover:text-primary" href="menu.html">Menu</a>
+                <a class="hover:text-primary" href="about.html">About Us</a>
+                <a class="hover:text-primary" href="contact.html">Contact</a>
+                <button class="bg-primary text-background-dark px-6 py-2 rounded-full font-bold">Sign In</button>
             </div>
+
             <button id="menu-toggle" class="md:hidden p-2 rounded-full bg-primary/10 text-primary"
-                style="position:relative;z-index:9999;pointer-events:auto;">
+                style="z-index:9999;">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
-        <!-- Mobile Menu Container -->
-        <div id="mobile-menu">
+
+        <!-- ✅ FIXED MOBILE MENU -->
+
+        <div id="mobile-menu"
+            class="fixed top-20 left-0 w-full z-[9999] hidden flex-col bg-background-dark/95 backdrop-blur-md p-6 gap-6 text-lg font-bold">
             <a href="menu.html">Menu</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
             <button class="btn-mobile">Sign In</button>
         </div>
-        <main class="max-w-7xl mx-auto px-6 py-8">
-            <!-- Hero Section -->
-            <section
-                class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/20 via-background-dark to-background-dark border border-primary/10 mb-12">
-                <div class="grid lg:grid-cols-2 gap-12 p-8 lg:p-16 items-center">
-                    <div class="z-10 order-2 lg:order-1">
-                        <div
-                            class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full mb-6">
-                            <span class="relative flex h-2 w-2">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                            </span>
-                            <span class="text-xs font-bold uppercase tracking-widest text-primary">Now Delivering
-                                24/7</span>
-                        </div>
-                        <h2 class="text-5xl lg:text-7xl font-black leading-none mb-6">
-                            Fast • Fresh • <br />
-                            <span class="text-primary">Delicious</span>
-                        </h2>
-                        <p class="text-lg text-slate-400 max-w-md mb-8 leading-relaxed">
-                            High-end fast food delivered to your doorstep. Experience the high-octane energy of SNACK
-                            UP.
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <button
-                                class="bg-gradient-to-r from-primary to-orange-600 text-background-dark font-bold px-10 py-4 rounded-full text-lg shadow-lg shadow-primary/25 hover:scale-105 transition-transform flex items-center gap-2">
-                                Order Now
-                                <span class="material-symbols-outlined">arrow_forward</span>
-                            </button>
-                            <button
-                                class="glass-effect px-10 py-4 rounded-full font-bold hover:bg-primary/10 transition-colors"
-                                onclick="window.location.href='menu.html'">
-                                View Menu
-                            </button>
-                        </div>
-                    </div>
-                    <div class="relative order-1 lg:order-2 flex justify-center">
-                        <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full scale-75 animate-pulse">
-                        </div>
-                        <img alt="Gourmet Double Cheeseburger"
-                            class="relative z-10 w-full max-w-md drop-shadow-[0_35px_35px_rgba(255,140,0,0.3)]"
-                            data-alt="Juicy gourmet double cheeseburger with fresh ingredients"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUCnc3spxzcJxydi-yJwJOnz7qLnyr3v1nA6rKlp93RCPEl8JXZHCFuUZso2bfDqx8qiMWsylF3euPj60s7HQm02kQmlL1-9VllXTpXu8Bt0Mmkg2VznT_7H47GKFocvljLcX9d0tOSUHFpbu1Zu_oxslM0fYCErANjT5MNSvK7u4K31vzsuUMdqIlQGeo2a2_k_05XUemYW_5EMhu9pqnoe9D9jYxCRUTb6kSFs9g7V4Nz9NgA-lfc1NTrdsmo004qA6Yr49ERH0" />
-                    </div>
-                </div>
-            </section>
-            <!-- Categories Section -->
-            <section class="mb-16">
-                <div class="flex items-end justify-between mb-8">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Browse Categories</h3>
-                        <div class="h-1 w-12 bg-primary rounded-full"></div>
-                    </div>
-                    <button class="text-primary font-bold flex items-center gap-1 hover:underline">
-                        See All
-                        <span class="material-symbols-outlined text-sm">open_in_new</span>
-                    </button>
-                </div>
-                <div class="flex overflow-x-auto pb-6 gap-6 custom-scrollbar snap-x">
-                    <!-- Category Card -->
-                    <div class="snap-center flex-shrink-0 group cursor-pointer">
-                        <div
-                            class="w-28 h-28 rounded-full glass-effect flex flex-col items-center justify-center category-glow transition-all duration-300 group-hover:bg-primary/20 mb-4">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">lunch_dining</span>
-                        </div>
-                        <p class="text-center font-bold">Burgers</p>
-                        <p class="text-center text-xs text-slate-500">Juicy &amp; Fresh</p>
-                    </div>
-                    <div class="snap-center flex-shrink-0 group cursor-pointer">
-                        <div
-                            class="w-28 h-28 rounded-full glass-effect flex flex-col items-center justify-center category-glow transition-all duration-300 group-hover:bg-primary/20 mb-4">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">local_pizza</span>
-                        </div>
-                        <p class="text-center font-bold">Pizza</p>
-                        <p class="text-center text-xs text-slate-500">Cheesy Bliss</p>
-                    </div>
-                    <div class="snap-center flex-shrink-0 group cursor-pointer">
-                        <div
-                            class="w-28 h-28 rounded-full glass-effect flex flex-col items-center justify-center category-glow transition-all duration-300 group-hover:bg-primary/20 mb-4">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">restaurant</span>
-                        </div>
-                        <p class="text-center font-bold">Fries</p>
-                        <p class="text-center text-xs text-slate-500">Crispy Gold</p>
-                    </div>
-                    <div class="snap-center flex-shrink-0 group cursor-pointer">
-                        <div
-                            class="w-28 h-28 rounded-full glass-effect flex flex-col items-center justify-center category-glow transition-all duration-300 group-hover:bg-primary/20 mb-4">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">icecream</span>
-                        </div>
-                        <p class="text-center font-bold">Shakes</p>
-                        <p class="text-center text-xs text-slate-500">Creamy Cool</p>
-                    </div>
-                    <div class="snap-center flex-shrink-0 group cursor-pointer">
-                        <div
-                            class="w-28 h-28 rounded-full glass-effect flex flex-col items-center justify-center category-glow transition-all duration-300 group-hover:bg-primary/20 mb-4">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">local_bar</span>
-                        </div>
-                        <p class="text-center font-bold">Drinks</p>
-                        <p class="text-center text-xs text-slate-500">Ice Cold</p>
-                    </div>
-                    <div class="snap-center flex-shrink-0 group cursor-pointer">
-                        <div
-                            class="w-28 h-28 rounded-full glass-effect flex flex-col items-center justify-center category-glow transition-all duration-300 group-hover:bg-primary/20 mb-4">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">bakery_dining</span>
-                        </div>
-                        <p class="text-center font-bold">Desserts</p>
-                        <p class="text-center text-xs text-slate-500">Sweet Treats</p>
-                    </div>
-                    <div class="snap-center flex-shrink-0 group cursor-pointer">
-                        <div
-                            class="w-28 h-28 rounded-full glass-effect flex flex-col items-center justify-center category-glow transition-all duration-300 group-hover:bg-primary/20 mb-4">
-                            <span
-                                class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">egg_alt</span>
-                        </div>
-                        <p class="text-center font-bold">Breakfast</p>
-                        <p class="text-center text-xs text-slate-500">Early Energy</p>
-                    </div>
-                </div>
-            </section>
-            <!-- Trending Section -->
-            <section class="mb-16">
-                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
-                    Trending Now
-                    <span
-                        class="bg-primary/20 text-primary text-xs px-2 py-1 rounded uppercase tracking-widest font-bold">Hot</span>
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Item Card -->
-                    <div
-                        class="group relative bg-background-light dark:bg-background-dark/50 border border-primary/10 rounded-xl p-4 transition-all hover:border-primary/40">
-                        <div class="overflow-hidden rounded-lg mb-4 aspect-[4/3] bg-background-dark">
-                            <img alt="The Big Stack Burger"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                data-alt="Massive triple stack burger with cheese and bacon"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5YxpMQZlc7LDzjHCM7mmbmzp18owpLPnbF92lmg8uRUAio36t7NBheVsbzQxeR05m2YvXKjS6k_iw9JyKmaKoRrZ5xRCgfsmuut5bpnF9cmyAadB4edEmjE-2bgrw2rgVc8Mch008JUZCKpIXYMxBjXLHJWZpUVmX044mAX2ObGytfFeQAct_NZe78e1y4c-u1KwHe6F7WTEP217DvwvSgTC1fAEtIleeoP80n_k_ispt1kClFVlOR1dyEJmHTK2bEYgiosqYpXw" />
-                        </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold">The Big Stack</h4>
-                            <span class="text-primary font-bold">$12.99</span>
-                        </div>
-                        <p class="text-sm text-slate-500 mb-4">Triple beef patty, signature sauce, aged cheddar, and
-                            crispy
-                            onions.</p>
+    </nav>
+
+    <!-- MAIN -->
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+
+        <section
+            class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/20 via-background-dark to-background-dark border border-primary/10 mb-12">
+            <div class="grid lg:grid-cols-2 gap-12 p-8 lg:p-16 items-center">
+
+                <div class="z-10 order-2 lg:order-1">
+                    <h2 class="text-5xl lg:text-7xl font-black leading-none mb-6">
+                        Fast • Fresh • <br />
+                        <span class="text-primary">Delicious</span>
+                    </h2>
+
+                    <p class="text-lg text-slate-400 max-w-md mb-8 leading-relaxed">
+                        High-end fast food delivered to your doorstep. Experience the high-octane energy of SNACK UP.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
                         <button
-                            class="w-full py-3 rounded-lg border-2 border-primary/20 font-bold group-hover:bg-primary group-hover:text-background-dark transition-all flex items-center justify-center gap-2">
-                            <span class="material-symbols-outlined text-xl">add_shopping_cart</span>
-                            Add to Order
-                        </button>
-                    </div>
-                    <div
-                        class="group relative bg-background-light dark:bg-background-dark/50 border border-primary/10 rounded-xl p-4 transition-all hover:border-primary/40">
-                        <div class="overflow-hidden rounded-lg mb-4 aspect-[4/3] bg-background-dark">
-                            <img alt="Truffle Mushroom Pizza"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                data-alt="Pizza with truffle oil and wild mushrooms"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg041msmWea30CW7ueRRuh9oU5tIPmYYbksWY2QnofLr6VFkOmXebHBgUaGn0FCmoL4uVelWn8rRSLh5SF4HJ5srNA--bdfL3xxDOa9BT0L6A92IYCErX0oOOEAx9C2z7qMJjBanx9c3FQOGlgana82k68kh_NdVE1P_wzxFkkHdxFwOcc3RvX9G3KAho-XIAMIYA_l-4AgSPMa3GaNmiltJWgCo8MX9CRUpeG_6JLbNK4uqe4U7eSqhy2kKwyanwpIk9Ep0P3NRw" />
-                        </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold">Truffle Wild</h4>
-                            <span class="text-primary font-bold">$18.50</span>
-                        </div>
-                        <p class="text-sm text-slate-500 mb-4">Wild mushrooms, truffle oil, fresh mozzarella, and
-                            aromatic
-                            thyme.</p>
-                        <button
-                            class="w-full py-3 rounded-lg border-2 border-primary/20 font-bold group-hover:bg-primary group-hover:text-background-dark transition-all flex items-center justify-center gap-2">
-                            <span class="material-symbols-outlined text-xl">add_shopping_cart</span>
-                            Add to Order
-                        </button>
-                    </div>
-                    <div
-                        class="group relative bg-background-light dark:bg-background-dark/50 border border-primary/10 rounded-xl p-4 transition-all hover:border-primary/40">
-                        <div class="overflow-hidden rounded-lg mb-4 aspect-[4/3] bg-background-dark">
-                            <img alt="Salted Caramel Shake"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                data-alt="Creamy milkshake with caramel drizzle"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN4Er4-J99vJ1quR0Y9TcsVZsg4vLpbCaPd5aaD2jl_LQ36YPM5y7yHa0Cq70BoYu12vp21GEr7nJiBr6NsaLM-Wce0CXczvDQmEZxnxQSFIDkES-OsEohG2OzoPn662As9huj04ZZDM1jTZJHZ98u_VBURpLeQnS0QE2IdwqB_-vJm6WxlwcIEPeXuyQ_HwmWRs5ZLHxV64WziNd4nCYQmmCd9JYQxQ-Fr07QEVxsrPLpJ00Ud-vDgqge4FIxO4KvcW9WFXjBIFg" />
-                        </div>
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold">Salted Bliss</h4>
-                            <span class="text-primary font-bold">$7.25</span>
-                        </div>
-                        <p class="text-sm text-slate-500 mb-4">Premium vanilla bean, sea salt caramel, and crushed
-                            honeycomb.</p>
-                        <button
-                            class="w-full py-3 rounded-lg border-2 border-primary/20 font-bold group-hover:bg-primary group-hover:text-background-dark transition-all flex items-center justify-center gap-2">
-                            <span class="material-symbols-outlined text-xl">add_shopping_cart</span>
-                            Add to Order
-                        </button>
+                            class="bg-gradient-to-r from-primary to-orange-600 text-background-dark font-bold px-10 py-4 rounded-full text-lg">Order
+                            Now</button>
+                        <button class="glass-effect px-10 py-4 rounded-full font-bold"
+                            onclick="window.location.href='menu.html'">View Menu</button>
                     </div>
                 </div>
-            </section>
-        </main>
-        <footer class="bg-background-light dark:bg-black/40 border-t border-primary/10 py-16 px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                    <div class="col-span-1 md:col-span-2">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="bg-primary p-2 rounded-lg flex items-center justify-center">
-                                <span class="material-symbols-outlined text-background-dark font-bold">fastfood</span>
-                            </div>
-                            <h2 class="text-2xl font-bold tracking-tighter text-primary">SNACK UP</h2>
-                        </div>
-                        <p class="text-slate-400 max-w-sm mb-6 leading-relaxed">
-                            The future of fast food. Quality ingredients, lightning-fast delivery, and an experience
-                            that
-                            fuels your lifestyle.
-                        </p>
-                        <div class="flex gap-4">
-                            <a class="w-10 h-10 rounded-full glass-effect flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all"
-                                href="#">
-                                <span class="material-symbols-outlined">alternate_email</span>
-                            </a>
-                            <a class="w-10 h-10 rounded-full glass-effect flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all"
-                                href="#">
-                                <span class="material-symbols-outlined">share</span>
-                            </a>
-                            <a class="w-10 h-10 rounded-full glass-effect flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all"
-                                href="#">
-                                <span class="material-symbols-outlined">podcasts</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h5 class="font-bold mb-6 uppercase tracking-widest text-sm">Links</h5>
-                        <ul class="space-y-4 text-slate-400">
-                            <li><a class="hover:text-primary transition-colors" href="menu.html">Menu</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5 class="font-bold mb-6 uppercase tracking-widest text-sm">Legal</h5>
-                        <ul class="space-y-4 text-slate-400">
-                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Terms of Use</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
-                        </ul>
-                    </div>
+
+                <div class="relative order-1 lg:order-2 flex justify-center">
+                    <img class="relative z-10 w-full max-w-md"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUCnc3spxzcJxydi-yJwJOnz7qLnyr3v1nA6rKlp93RCPEl8JXZHCFuUZso2bfDqx8qiMWsylF3euPj60s7HQm02kQmlL1-9VllXTpXu8Bt0Mmkg2VznT_7H47GKFocvljLcX9d0tOSUHFpbu1Zu_oxslM0fYCErANjT5MNSvK7u4K31vzsuUMdqIlQGeo2a2_k_05XUemYW_5EMhu9pqnoe9D9jYxCRUTb6kSFs9g7V4Nz9NgA-lfc1NTrdsmo004qA6Yr49ERH0" />
                 </div>
-                <div class="border-t border-primary/5 pt-8 text-center text-slate-500 text-sm">
-                    <p>© 2024 SNACK UP INC. ALL RIGHTS RESERVED. DELIVERING EXCELLENCE AT LIGHT SPEED.</p>
-                </div>
+
             </div>
-        </footer>
-        <script src="script.js"></script>
+        </section>
+
+    </main>
+
+    <footer class="bg-background-light dark:bg-black/40 border-t border-primary/10 py-16 px-6">
+        <p class="text-center text-slate-500 text-sm">© 2024 SNACK UP INC.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

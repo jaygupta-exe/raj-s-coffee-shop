@@ -771,7 +771,7 @@ h3,
     display: none;
     flex-direction: column;
     padding: 20px 0;
-    z-index: 9990;
+    z-index: 100;
 }
 
 #mobile-menu.active {
